@@ -37,9 +37,9 @@ font-weight: 800;
 /* body{
     background-color: var(--bg-body);
 } */
-.logo{
-    width: 150px;
-    height: 50%;
+img{
+    
+    height: 100%;
     color: var(--bg-white);
     font-family:  'Dancing Script', cursiva;
 }

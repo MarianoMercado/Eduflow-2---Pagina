@@ -1,0 +1,131 @@
+@media (max-width:992px){
+    #hero{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    .hero-info{
+        text-align: center;
+        width: 90%;
+        align-items: center;
+       
+        
+    }
+    .hero-info h1{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .hero-info p {
+        max-width: 80%;
+        padding: 0;
+        
+    }
+    
+    .hero-footer{
+        justify-content: center;
+    }
+    .hero-img{
+        display: none;
+    }
+
+
+    /* about */
+    #about{
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+       
+    }
+
+
+    /* card */
+    #card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* contact */
+    #contact{
+        display: flex;
+        flex-direction: column;        
+    }
+    .contact-info h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: 500;
+    }
+    #contact .contact-img{
+        display: none;
+    }
+}
+
+@media(max-width: 576px){
+
+    /* hero */
+
+    #hero , #about, #card, #contact,#footer{
+        width: 70%;
+    
+}
+    .navbar ul{
+        background-color:var(--bg-white);
+        color: var(--nav-bg-gris);
+        width: 30%;
+        height: calc(100vh - 65px);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translatex(200%);
+        transition: all 0.4s ease-out;
+       
+    }
+    .navbar i {
+        display: block;
+    }
+    #toggle-menu:checked ~ .navbar-list{
+       
+        transform: translateX(0);
+        transition: all 0.4s ease;
+
+    }
+    #hero{
+        padding: 20px;
+    }
+
+.hero-info p {
+    width: 100%;
+    font-size: 20px;
+    
+}
+.navbar-list a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+/* about */
+#about{
+    padding: 20px;
+}
+#about p{
+    width: 90%;
+    font-size: 15px;
+}
+
+/* contact */
+#card{
+    padding: 20px;
+}
+.card-articles{
+    gap: 20px   ;
+}
+
+
+}

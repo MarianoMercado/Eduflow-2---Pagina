@@ -1,0 +1,140 @@
+
+
+/* Agregamos el scroll behavior smooth para que sea más suave la navegación */
+
+/* scroll padding top para cuando se clickea en el link tome en cuenta
+la altura del navbar y no nos tape parte de la sección. */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+}
+
+/* efecto glass */
+.overlay{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    /* efecto Glassmorphismo */
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+     backdrop-filter: blur(4px); 
+     -webkit-backdrop-filter: blur(4px);
+     display: none;
+}
+
+#toggle-menu:checked ~ .overlay{
+    display: block;
+}
+/* animacion a imagen de presentacion*/
+.hero-img {
+    transition: all 0.3s linear;
+  }
+
+  .hero-img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s linear;
+}
+
+/* animacion a imagen de  contacto*/
+.contact-img{
+    transition: all 0.3s linear;
+}
+.contact-img:hover {
+    transform: scale(1.2);
+    transition: all 0.5s linear;
+}
+/* 
+.card-articles-html:hover i{
+    transition: all 0.3s linear;
+} */
+.card-articles-html i:hover,
+.card-articles-css i:hover,
+.card-articles-js i:hover{
+    animation:rotate 2s infinite;
+    transition: all 0.5s linear;
+}
+
+/* Animaciones de entrada  */
+
+/* fade da el efecto de aparición */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* slide-up da el efecto de abajo hacia arriba (eje y)*/
+@keyframes slide-up {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* slide-up da el efecto de derecha a izquierda (eje x)*/
+@keyframes slide-right {
+    from {
+        transform: translateX(1000px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* slide-up da el efecto de izquierda a derecha(eje x)*/
+@keyframes slide-lefth {
+    from {
+        transform: translateX(-1000px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Rotate gira la caja 360°*/
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* aplicando los dos efectos al mismo tiempo separados por coma */
+.hero-info h1 {
+    /* animacion - duración - animation-function */
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
+}
+.hero-info p {
+    /* animacion - duración - animation-function */
+    animation: fade 1.8s  ease-out, slide-up 1.8s ease-in-out;
+}
+.hero-footer a{
+    animation: fade 3s  ease-out, slide-up 2s ease-in-out;
+
+}
+.hero-img{
+    animation: fade 3s  ease-out,  slide-up 2s ease-in-out;
+
+}
+
+#about
+ {
+    animation: fade 2s  ease-out, slide-right 2s ease-in-out;
+
+}
+#card {
+    animation: fade 2s  ease-out, slide-lefth 2s ease-in-out;
+
+}

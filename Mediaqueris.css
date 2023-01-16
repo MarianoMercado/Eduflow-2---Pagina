@@ -62,7 +62,7 @@
     }
 }
 
-@media(max-width: 576px){
+@media(max-width: 700px){
 
     /* hero */
 
@@ -83,8 +83,22 @@
         justify-content: center;
         transform: translatex(200%);
         transition: all 0.4s ease-out;
-       
+       z-index: 2;
+      
     }
+    
+    .navbar a{
+        padding: 10px;
+        line-height: 10px;
+    }
+    
+    .navbar a:hover{
+        border-bottom: #cccccc solid;
+        padding-bottom: 5px;
+        
+        
+    
+      }
     .navbar i {
         display: block;
     }
@@ -127,5 +141,23 @@
     gap: 20px   ;
 }
 
+/* animaciones */
+
+/* Rotate gira la caja 360°*/
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card-articles-html i,
+.card-articles-css i,
+.card-articles-js i{
+    animation:rotate 2s 10s;
+    transition: all 0.5s linear;
+}
 
 }
